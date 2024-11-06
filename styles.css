@@ -106,13 +106,13 @@ img {
 @media (max-width: 768px) {
 
 	body {
-		align-items: unset;
 		overflow: auto;
 	}
 
 	.main-div {
 		padding: 0;
 		width: 100vw;
+		min-height: 100vh;
 		border-radius: 0;
 		align-items: unset;
 		flex-direction: column;
@@ -126,6 +126,10 @@ img {
 
 	 .right-panel {
         max-height: 33%;
+    }
+
+    .left-panel {
+    	height: 100%;
     }
 
 	.inner-left-panel {
