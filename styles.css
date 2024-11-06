@@ -1,0 +1,131 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Roboto", sans-serif;
+}
+
+body {
+	background-color: hsl(234, 29%, 20%);
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+		justify-content: center;
+		align-items: center;
+}
+
+.main-div {
+	background-color: white;
+	border-radius: 20px;
+	padding: 20px;
+	max-width: 1000px;
+	width: 70%;
+	display: flex;
+		align-items: center;
+}
+
+.left-panel {
+	padding-inline: 40px;
+	display: flex;
+		align-items: center;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: clamp(2.4rem, 4vw, 4rem);
+}
+
+p {
+	margin-block: clamp(7px, 1vw, 20px);
+	font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+ul {
+	list-style-type: none;
+	margin-block: clamp(7px, 1vw, 25px);
+}
+
+li {
+	margin-block: 5px;
+	display: flex;
+		align-items: flex-start;
+	position: relative;
+	font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+li::before {
+    content: "";
+    background-image: url('icon-list.svg'); 
+    background-size: cover;
+    width: clamp(15px, 1.5vw, 20px); 
+    height: clamp(15px, 1.5vw, 20px);
+    position: absolute;
+    left: -10%; 
+    top: 5px;
+    transform: translateY(0); 
+}
+
+label {
+	width: 100%;
+	margin-block: clamp(7px, 2vh, 25px);
+	font-weight: bold;
+	font-size: clamp(0.8rem, 1vw, 1.3rem);
+}
+
+input {
+	display: block;
+	padding: clamp(10px, 1vw, 15px);
+	border-radius: 10px;
+	border: 2px solid hsl(231, 7%, 60%);
+	width: 100%;
+	margin-top: 10px;
+}
+
+button {
+	display: block;
+	padding: clamp(10px, 1vw, 15px);
+	color: white;
+	background-color: hsl(235, 18%, 26%);
+	border-radius: 10px;
+	width: 100%;
+	font-weight: bold;
+	font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.right-panel {
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+@media (max-width: 768px) {
+
+	body {
+		align-items: unset;
+	}
+
+	.main-div {
+		padding: 0;
+		width: 100vw;
+		border-radius: 0;
+		align-items: unset;
+		flex-direction: column;
+	}
+
+	img {
+		width: 100vw;
+		height: 100%; 
+        object-fit: cover; 
+	}
+
+	.inner-left-panel {
+		padding-block: 20px;
+		height: 100%;
+		display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+	}
+}
