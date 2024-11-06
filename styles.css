@@ -92,6 +92,7 @@ button {
 	width: 100%;
 	font-weight: bold;
 	font-size: clamp(1rem, 1.5vw, 1.5rem);
+	border: 0;
 }
 
 .right-panel {
