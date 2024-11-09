@@ -21,6 +21,8 @@ subscribeButton.addEventListener("click", (event) => {
 		successMessage.innerHTML = `A confirmation email has been sent to <b>${emailInput.value}</b>. Please open it and click the button inside to confirm your subscription.`;
 	} else {
 		emailInput.classList.add('error');
-		labelDiv.insertAdjacentHTML('beforeend', `<span style="color: hsl(4, 100%, 67%)">Valid email required</span>`);
+		if (!labelDiv.querySelector('#error-message')) {
+			labelDiv.insertAdjacentHTML('beforeend', `<span style="color: hsl(4, 100%, 67%)" id="error-message">Valid email required</span>`);
+		}
 	}
 })
